@@ -21,7 +21,7 @@ Remember: The goal is to LEARN, not just get working code!
 """
 MY ORIGINAL AI PROMPT:
 [I'm learning Python basics as a Junior in highschool and Im taking an intro to ai class. 
-I have some experience with java and html. Can you create 6 practice problems that cover:
+I have some experience with java and html. Can you create 5 practice problems that cover:
  Variables and basic data types, Conditionals (if/elif/else), Loops (for and while), Functions, and Basic list operations 
  Make them progressively slightly more challenging. Make sure each problem has clear instructions and example inputs/outputs.]
 
@@ -74,6 +74,20 @@ PROBLEM 4: [Topic: For Loops]
 [Task: Write a program that prints the multiplication table for a number from 1 to 10.]
 
 userNum = int(input("Enter a number: "))
+num = int(10)
+for i in range(1,11):
+    print(userNum * num)
+    num = num - 1
+____
+PROBLEM 5: [Topic: Functions & List Operations]
+[Task: Write a function called double_numbers(numbers) that takes a list of numbers and returns a new list where each number is doubled.]
+
+doubled_list = [1,2,4,6]
+def double_numbers(numbers)
+    for i in range of (5)
+        doubled_list
+        
+    
 ____
 Example:
 Problem: Write a function called 'is_even' that takes an integer and returns 
@@ -139,7 +153,11 @@ while start > 0:
 
 
 print("\nTesting Problem 4:")
-# Add your tests here
+userNum = int(input("Enter a number: "))
+num = int(10)
+for i in range(1,11):
+    print(userNum * num)
+    num = num - 1
 
 print("\nTesting Problem 5:")
 # Add your tests here
