@@ -83,10 +83,12 @@ PROBLEM 5: [Topic: Functions & List Operations]
 [Task: Write a function called double_numbers(numbers) that takes a list of numbers and returns a new list where each number is doubled.]
 
 doubled_list = [1,2,4,6]
-def double_numbers(numbers)
-    for i in range of (5)
-        doubled_list
-        
+def double_numbers(lst: list[int]): 
+    doubled = []
+    for num in lst:
+        doubled.append(num * 2)
+        print(doubled)
+    return doubled
     
 ____
 Example:
@@ -160,6 +162,18 @@ for i in range(1,11):
     num = num - 1
 
 print("\nTesting Problem 5:")
-# Add your tests here
+def double_numbers(lst: list[int]): 
+    doubled = []
+    for num in lst:
+        doubled.append(num * 2)
+    return doubled
+list = [1,2,4]
+result = double_numbers(list)
+
+print("List:", list)
+print("Doubled:", result)
+
+
+assert double_numbers([1,2,4,6]) == ([2,4,8,12]), "double_numbers rfailed"
 
 
