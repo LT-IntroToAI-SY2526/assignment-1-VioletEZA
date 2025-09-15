@@ -63,14 +63,15 @@ def every_other(lst: List[T]) -> List[T]:
     Returns:
         a list of every of other item in the original list starting with the first
     """
-    result = []
+    #result = []
 
-    for i in range(len(lst)):
-        if i % 2 == 0:
-            result.append(lst[1])
-    return result
+    #for i in range(len(lst)):
+    #    if i % 2 == 0:
+    #        result.append(lst[1])
+    #return result
 
     return lst[::2]
+
 def sum_list(lst: List[int]) -> int:
     """Takes a list of numbers, and returns the sum of the numbers in that list. Cannot
     use the built in function `sum`.
@@ -135,7 +136,23 @@ def duck_duck_goose(lst: List[str]) -> List[str]:
     Returns:
         the resulting list after playing duck duck goose
     """
-    raise NotImplementedError("duck_duck_goose")
+    position = 0
+    current = "duck1"
+    while len(lst) > 2:
+        if current == "duck1":
+            current = "duck2"
+            position += 1
+        elif current == "duck2":
+            current = "goose"
+            position += 1
+        else: #current == "goose"
+            current = "duck1"
+            lst.pop(position)
+        
+        if position == len(lst):
+            position = 0
+
+    return lst
 
 
 # this line causes the nested code to be skipped if the file is imported instead of run
@@ -156,6 +173,8 @@ if __name__ == "__main__":
     assert median([1, 2, 3, 4, 5]) == 3, "median of [1,2,3,4,5] failed"
 
     names = ["roscoe", "kim", "woz", "solin", "law", "remess"]
-    assert duck_duck_goose(names) == ["roscoe", "law"]
-
+    assert duck_duck_goose(names) == ["roscoe", "law"], "duck_duck_goose of names failed"
+    classNames = ["miguel", "emma", "franco", "lukas", "maks"]
+    assert duck_duck_goose(classNames) == ["emma", "lukas"], "duck_duck_goose of class names failed"
+    
     print("All tests passed!")
