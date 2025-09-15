@@ -174,6 +174,6 @@ print("List:", list)
 print("Doubled:", result)
 
 
-assert double_numbers([1,2,4,6]) == ([2,4,8,12]), "double_numbers rfailed"
+assert double_numbers([1,2,4,6]) == ([2,4,8,12]), "double_numbers failed"
 
 
